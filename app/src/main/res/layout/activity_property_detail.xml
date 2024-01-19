@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PropertyDetail">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/below_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPropertyDetail"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/ImageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="0"
+                    app:iss_period="1000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHouseDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="10 Marla Double Storey House"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/cvPropertyDetail"
+            app:layout_constraintTop_toBottomOf="@+id/cvPropertyDetail" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/location_icon"
+            app:layout_constraintStart_toStartOf="@+id/tvHouseDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvHouseDetail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHouseDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" Services Colony Block A New Satellite Town Sargodha"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivLocation"
+            app:layout_constraintTop_toTopOf="@+id/ivLocation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:gravity="center_vertical"
+            android:text="PKR"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/ivLocation"
+            app:layout_constraintTop_toBottomOf="@+id/tvHouseDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="3.5"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCurrency"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrency"
+            app:layout_constraintTop_toTopOf="@+id/tvCurrency" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPriceDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="Crore"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+            app:layout_constraintStart_toEndOf="@+id/tvPrice"
+            app:layout_constraintTop_toTopOf="@+id/tvPrice" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/light_pink"
+            android:padding="20dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrice">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBed"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bed_icon"
+                android:tint="@color/red" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="6 Bed"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMarla"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/light_pink"
+            android:padding="20dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMarla"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/marla_icon"
+                android:tint="@color/red" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="10 Marla"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/cvMarla"
+            app:layout_constraintStart_toStartOf="@+id/cvMarla"
+            app:layout_constraintTop_toBottomOf="@+id/cvMarla" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBath"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/light_pink"
+            android:padding="20dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBath"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bath_room_icon"
+                android:tint="@color/red" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="3 Bath"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/cvBath"
+            app:layout_constraintStart_toStartOf="@+id/cvBath"
+            app:layout_constraintTop_toBottomOf="@+id/cvBath" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView23"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/light_pink"
+            android:padding="20dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivKitchen"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/kitchen_icon"
+                android:tint="@color/red" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvKitchen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="2 Kitchen"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView23"
+            app:layout_constraintStart_toStartOf="@+id/cardView23"
+            app:layout_constraintTop_toBottomOf="@+id/cardView23" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/light_pink"
+            android:padding="20dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView23">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tv_icon"
+                android:tint="@color/red" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="TV Launch"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/cvTv"
+            app:layout_constraintStart_toStartOf="@+id/cvTv"
+            app:layout_constraintTop_toBottomOf="@+id/cvTv" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDoubleStory"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/light_pink"
+            android:padding="20dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView23">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDoubleStory"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rent_icon"
+                android:tint="@color/red" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDoubleStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Double Story"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/cvDoubleStory"
+            app:layout_constraintStart_toStartOf="@+id/cvDoubleStory"
+            app:layout_constraintTop_toBottomOf="@+id/cvDoubleStory" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

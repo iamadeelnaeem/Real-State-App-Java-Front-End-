@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_marginBottom="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cl_bg" >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pic1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHouseDetail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="10 Marla Double Story House"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivLocation"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/location_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/tvPrice"
+                            app:layout_constraintStart_toStartOf="@+id/tvHouseDetail"
+                            app:layout_constraintTop_toBottomOf="@+id/tvHouseDetail" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHouseAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=" Services Colony lahore"
+                            android:textColor="@color/gray"
+                            android:textSize="12sp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivLocation"
+                            app:layout_constraintTop_toTopOf="@+id/ivLocation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCurrency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:text="PKR"
+                            android:textColor="@color/green"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                            app:layout_constraintStart_toStartOf="@+id/ivLocation"
+                            app:layout_constraintTop_toBottomOf="@+id/tvHouseAddress" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20000"
+                            android:textColor="@color/green"
+                            android:textSize="12sp"
+                            android:layout_marginStart="3dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/tvCurrency"
+                            app:layout_constraintTop_toTopOf="@+id/tvCurrency"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvCurrency"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPerMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/month"
+                            android:textColor="@color/green"
+                            android:textSize="12sp"
+                            android:layout_marginStart="3dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/tvPrice"
+                            app:layout_constraintTop_toTopOf="@+id/tvPrice"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvPrice"/>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tvCurrency">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivBed"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/bed_icon" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBedNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:text="4"
+                                android:textColor="@color/gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBeds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:text="Beds"
+                                android:textColor="@color/gray"
+                                android:textSize="10sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivBath"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/marla_icon" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvKitchen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:text="3"
+                                android:textColor="@color/gray"
+                                android:textSize="14sp" />
+
+                            <!--                <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                    android:id="@+id/tvBaths"-->
+                            <!--                    android:layout_width="wrap_content"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:text="Baths"-->
+                            <!--                    android:textSize="10sp"-->
+                            <!--                    android:textColor="@color/gray"-->
+                            <!--                    android:layout_marginStart="3dp"/>-->
+
+                            <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                            <!--                    android:id="@+id/ivMarla"-->
+                            <!--                    android:layout_width="15dp"-->
+                            <!--                    android:layout_height="15dp"-->
+                            <!--                    android:layout_marginStart="5dp"-->
+                            <!--                    android:layout_gravity="center_vertical"-->
+                            <!--                    android:src="@drawable/marla_icon" />-->
+
+                            <!--                <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                    android:id="@+id/tvMarlaNo"-->
+                            <!--                    android:layout_width="wrap_content"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:text="2"-->
+                            <!--                    android:textSize="14sp"-->
+                            <!--                    android:textColor="@color/gray"-->
+                            <!--                    android:layout_marginStart="3dp"/>-->
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMarla"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:text="Kitchen"
+                                android:textColor="@color/gray"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
